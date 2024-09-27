@@ -132,7 +132,7 @@ def test(data,
         # Statistics per image
         for si, pred in enumerate(out):
             labels = targets[targets[:, 0] == si, 1:]
-            print(f'labels: {labels.size(0)}') #라벨링 개수
+            #print(f'labels: {labels.size(0)}') #라벨링 개수
             
   
             nl = len(labels)
@@ -147,7 +147,7 @@ def test(data,
 
             # Predictions
             predn = pred.clone()
-            print(f'pred: {predn.size(0)}') #탐지 개수
+            #print(f'pred: {predn.size(0)}') #탐지 개수
             scale_coords(img[si].shape[1:], predn[:, :4], shapes[si][0], shapes[si][1])  # native-space pred
 
             # Calculate MAE and RMSE
