@@ -293,7 +293,7 @@ def run(
         LOGGER.info(f'Mean Absolute Error (MAE): {mean_mae}')
 
     if len(rmse_list) > 0:
-        mean_rmse = np.mean(np.concatenate(rmse_list))
+        mean_rmse = np.sqrt(p.mean(np.concatenate(rmse_list)))
         LOGGER.info(f'Root Mean Square Error (RMSE): {mean_rmse}')
 
     # Compute metrics
